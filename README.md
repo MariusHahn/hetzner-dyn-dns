@@ -13,5 +13,5 @@ This will return you a json containing all zones available with the given token.
 Update the record of your choice
 
 ```bash
-xxxx <YOUR_HETZNER_TOKEN> <ZONE_FILE_ID> <RECORD_NAME> 
+./update-dns.sh <YOUR_HETZNER_TOKEN> <ZONE_FILE_ID> <RECORD_NAME> 
 ```
