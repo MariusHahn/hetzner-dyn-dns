@@ -4,7 +4,7 @@
 base_url='https://dns.hetzner.com/api/v1'
 auth_string="Auth-API-Token: $1" 
 zone_id=$2 
-record_name='wg'
+record_name=$3
 
 echo  "Zone id: $zone_id"
 
