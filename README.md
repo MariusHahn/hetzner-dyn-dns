@@ -21,6 +21,15 @@ Update the record of your choice
 
 Let's combine it with a cronjob that runs every 10 minutes.
 
+Clone this repo and add a file `update_my_record.sh`
+
+```bash
+#!/bin/sh
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+"$SCRIPT_DIR/update-dns.sh" <YOUR_HETZNER_TOKEN> <ZONE_FILE_ID> <RECORD_NAME>
+
+```
+
 ```bash
 crontab -e
 ```
@@ -28,5 +37,5 @@ crontab -e
 Then add 
 
 ```bash
-*/10 * * * * /path/to/your/update-dns.sh <YOUR_HETZNER_TOKEN> <ZONE_FILE_ID> <RECORD_NAME>
+*/10 * * * * /path/to/your/update_my_record.sh 
 ```
