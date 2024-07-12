@@ -34,7 +34,7 @@ else
           -H  "$auth_string" \
           -d '{
                "value": "'"$current_ip"'",
-               "ttl": 0,
+               "ttl": 600,
                "type": "A",
                "name": "'"$record_name"'",
                "zone_id": "'"$zone_id"'"
