@@ -54,8 +54,10 @@ def update_ip_address(token, current_server_ip, rr_set):
 
 
 def get_rrsets():
+    import os
     import json
-    file_path = "rr_sets.json"
+    script_dir = os.path.dirname(os.path.abspath(__file__)) 
+    file_path = os.path.join(script_dir, 'rr_sets.json')
     with open(file_path, "r") as file:
         return [RRSet(rr_set['zoneName'], rr_set['name'], rr_set['type']) for rr_set in json.load(file)]
 
