@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 from __future__ import annotations
 from dotenv import load_dotenv
 from os import getenv
