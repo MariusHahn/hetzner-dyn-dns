@@ -1,3 +1,6 @@
 .env
 rr_sets.json
 *.log
+config.json
+hetzner_dyn_dns.egg-info
+**/__pycache__/
