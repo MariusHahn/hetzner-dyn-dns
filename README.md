@@ -40,3 +40,14 @@ TOKEN=<your-token>
 ```bash
 */10 * * * * /<clone_path>/hetzner-dyn-dns/.venv/bin/python /<clone_path>/hetzner-dyn-dns/update-dns.py >> /<clone_path>/hetzner-dyn-dns/update-dns.log 2>&1
 ```
+
+## run with docker
+
+Build and run the container with your `config.json` mounted:
+
+```bash
+docker build -t hetzner-dyn-dns .
+docker run -d --name hetzner-dns \
+  -v $(pwd)/config.json:/app/main/config.json \
+  hetzner-dyn-dns
+```
