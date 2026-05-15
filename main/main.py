@@ -3,7 +3,7 @@ from __future__ import annotations
 import logging
 from schedule import every, repeat, run_pending, idle_seconds
 import time
-from main.util import (
+from util import (
     get_current_server_ip_address, 
     get_not_yet_existing_domain_names, 
     create_domain_records, 
