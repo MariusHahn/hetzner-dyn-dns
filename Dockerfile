@@ -4,11 +4,11 @@ RUN apk --no-cache add curl
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY pyproject.toml .
 RUN pip install -e .
 
 COPY main/ ./main/
 
 VOLUME ["/app"]
 
-CMD ["python", "/app/main/update_dns.py"]
+CMD ["python", "/app/main/main.py"]
