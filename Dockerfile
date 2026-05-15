@@ -5,7 +5,7 @@ RUN apk --no-cache add curl
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -e .
 
 COPY main/ ./main/
 
