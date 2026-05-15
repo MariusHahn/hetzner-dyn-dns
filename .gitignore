@@ -4,3 +4,4 @@ rr_sets.json
 config.json
 hetzner_dyn_dns.egg-info
 **/__pycache__/
+.scatch
